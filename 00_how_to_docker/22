@@ -1,0 +1,3 @@
+docker-machine ssh Char
+docker swarm init --advertise-addr 192.168.99.100
+docker swarm join --token SWMTKN-1-63q7i5ndrx8mfzznwa9yrib0dxa5kgta35i1i04p9r15vpb6oj-a7bwmwhfd0ze7ogv5xrhruq0i 192.168.99.100:2377

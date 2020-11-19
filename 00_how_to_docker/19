@@ -1,0 +1,6 @@
+docker run --name Abathur -v "$HOME":/root -i -d -p 3000:3000 python:2-slim
+docker exec Abathur pip install flask
+docker exec Abathur sh -c "echo 'from flask import Flask' > /root/app.py"
+docker exec Abathur sh -c "echo 'app = Flask(__name__)' >> /root/app.py"
+docker exec Abathur sh -c "echo '@app.route(\"/\")' >> /root/app.py"
+docker exec Abathur sh -c "echo 'def index():' >> /root/app.py"
